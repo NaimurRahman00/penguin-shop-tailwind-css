@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Penguin Fashion</title>
     <!-- Font Awesome CDN -->
-    <script src="https://kit.fontawesome.com/4363fbc18b.js" crossorigin="anonymous"></script>
-    <!-- Tailwind CSS CDN -->
+    <script
+      src="https://kit.fontawesome.com/4363fbc18b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Tailwind CSS and Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,21 +37,19 @@
       }
 
       /* Responsive */
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         #container {
           width: 90%;
-          
         }
-        
       }
     </style>
   </head>
   <body>
     <!-- Header -->
-    <header class="bg-orange-50 h-screen">
+    <header class="bg-orange-50">
       <!-- Navbar -->
       <div id="container">
-        <nav class="flex items-center justify-between pt-7 sm:pt-10">
+        <nav class="flex items-center justify-between pt-7 sm:pt-12">
           <div class="flex">
             <img class="sm:w-72 w-48" src="./icons/logo.png" alt="" />
             <img
@@ -52,7 +58,9 @@
               alt="dot-group"
             />
           </div>
-          <div class="sm:gap-14 items-center font-medium hidden sm:flex">
+          <div
+            class="sm:gap-14 items-center font-medium hidden sm:flex text-slate-800"
+          >
             <a href="">Home</a>
             <a href="">Product</a>
             <a href="">About us</a>
@@ -65,16 +73,21 @@
           </div>
         </nav>
         <!-- Banner Hero -->
-        <div class="sm:flex justify-between gap-40 items-center sm:mt-5 mt-12  pb-16">
+        <div
+          class="sm:flex justify-between gap-40 items-center sm:mt-5 pt-16 pb-16"
+        >
           <div class="sm:w-1/2 mb-11">
             <h1
               class="text-6xl sm:text-[80px] font-extrabold text-[#363958] sm:mb-[-.5rem]"
               id="font-bebas"
             >
-              <span class="text-amber-400">Be the Penguins</span><br/>
+              <span class="text-amber-400">Be the Penguins</span><br />
               of Winter
             </h1>
-            <p class="mt-0 leading-7 w-3/4 text-[#3E3E3E] mb-6" id="font-roboto">
+            <p
+              class="mt-0 leading-7 w-3/4 text-[#3E3E3E] mb-6"
+              id="font-roboto"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry
             </p>
@@ -95,7 +108,223 @@
         </div>
       </div>
     </header>
-    <main></main>
+
+    <main>
+      <!-- Women jacket section -->
+      <section class="py-14">
+        <div class="container" id="container">
+          <h2
+            class="uppercase text-4xl sm:text-5xl mb-5 text-center sm:text-left"
+          >
+            Women jacket
+          </h2>
+          <!-- Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 auto-cols-auto"
+          >
+            <!-- card 1 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-1.png"
+                  alt="jacket-1"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Yellow Coat Jacket</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-2.png"
+                  alt="jacket-2"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Ladies Jacket</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-3.png"
+                  alt="jacket-3"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Woman Leather Jacket</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card end -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Mens jacket -->
+      <section class="py-14">
+        <div class="container" id="container">
+          <h2
+            class="uppercase text-4xl sm:text-5xl mb-5 text-center sm:text-left"
+          >
+            Man jacket
+          </h2>
+          <!-- Cards -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 auto-cols-auto"
+          >
+            <!-- card 1 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-4.png"
+                  alt="jacket-4"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Snowboard Jacket Mens</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-5.png"
+                  alt="jacket-5"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Man Leather Jackets</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="card w-full bg-base-100 shadow-md">
+              <figure class="px-10 pt-6 pb-4 m-4 rounded-2xl bg-stone-200">
+                <img
+                  src="./images/jacket-6.png"
+                  alt="jacket-6"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body px-4 py-6">
+                <h2 class="card-title">Man Casual Jackets</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="card-actions flex justify-between items-center">
+                  <h3 class="text-4xl font-black">$234</h3>
+                  <button
+                    class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+                  >
+                    <img
+                      class="w-6 mr-2"
+                      src="./icons/shopping-cart.png"
+                      alt="shopping-cart"
+                    />
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card end -->
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer></footer>
   </body>
 </html>
