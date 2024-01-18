@@ -4,31 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Penguin Fashion</title>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/4363fbc18b.js" crossorigin="anonymous"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      #font-bebas {
+        font-family: "Bebas Neue", sans-serif !important;
+      }
+      #font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
+      #container {
+        width: 81.25%;
+        max-width: 1440px;
+        margin: auto;
+      }
+
+      /* Responsive */
+      @media (max-width:600px) {
         #container {
-            width: 81.25%;
-            max-width: 1440px;
-            margin: auto;
+          width: 90%;
+          
         }
+        
+      }
     </style>
   </head>
   <body>
-    <header class="bg-orange-50">
+    <!-- Header -->
+    <header class="bg-orange-50 h-screen">
+      <!-- Navbar -->
       <div id="container">
-        <nav class="flex items-center justify-between pt-10">
+        <nav class="flex items-center justify-between pt-7 sm:pt-10">
           <div class="flex">
-            <img class="w-72" src="./icons/logo.png" alt="" />
-            <img class="absolute top-0 left-1/3" src="./images/dot-group.png" alt="">
+            <img class="sm:w-72 w-48" src="./icons/logo.png" alt="" />
+            <img
+              class="hidden sm:absolute sm:top-0 sm:left-1/3 sm:inline"
+              src="./images/dot-group.png"
+              alt="dot-group"
+            />
           </div>
-          <div class="flex gap-14 items-center">
+          <div class="sm:gap-14 items-center font-medium hidden sm:flex">
             <a href="">Home</a>
             <a href="">Product</a>
             <a href="">About us</a>
             <a href="">Contact us</a>
           </div>
+          <div class="sm:hidden contents">
+            <h3 class="text-3xl">
+              <i class="text-black fa-solid fa-bars-staggered"></i>
+            </h3>
+          </div>
         </nav>
+        <!-- Banner Hero -->
+        <div class="sm:flex justify-between gap-40 items-center sm:mt-5 mt-12  pb-16">
+          <div class="sm:w-1/2 mb-11">
+            <h1
+              class="text-6xl sm:text-[80px] font-extrabold text-[#363958] sm:mb-[-.5rem]"
+              id="font-bebas"
+            >
+              <span class="text-amber-400">Be the Penguins</span><br/>
+              of Winter
+            </h1>
+            <p class="mt-0 leading-7 w-3/4 text-[#3E3E3E] mb-6" id="font-roboto">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+            <button
+              class="text-white font-medium text-base py-4 px-9 bg-gradient-to-r from-lime-500 to-lime-600 mt-2 rounded-lg flex"
+            >
+              <img
+                class="w-6 mr-2"
+                src="./icons/shopping-cart.png"
+                alt="shopping-cart"
+              />
+              BUY NOW
+            </button>
+          </div>
+          <div class="sm:w-1/2">
+            <img src="./images/model.png" alt="" />
+          </div>
+        </div>
       </div>
     </header>
     <main></main>
